@@ -3,7 +3,7 @@
 <mapper namespace="flybear.hziee.app.mapper.UnitHouseMapper">
   <resultMap id="BaseResultMap" type="flybear.hziee.app.entity.UnitHouse">
     <!--@mbg.generated-->
-    <!--@Table vote_system_demo.unit_house-->
+    <!--@Table unit_house-->
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="unit_table_id" jdbcType="BIGINT" property="unitTableId" />
     <result column="house_id" jdbcType="BIGINT" property="houseId" />

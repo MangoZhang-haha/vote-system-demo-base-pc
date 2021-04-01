@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "vote_system_demo.community")
+@TableName(value = "community")
 public class Community implements Serializable {
     /**
      * 主键

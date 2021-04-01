@@ -1,11 +1,11 @@
 package flybear.hziee.app.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "vote_system_demo.house")
+@TableName(value = "house")
 public class House implements Serializable {
     /**
      * 主键
@@ -110,10 +110,12 @@ public class House implements Serializable {
     @TableField(value = "deleted")
     private Boolean deleted;
 
-    @TableField(value = "gmt_create")
+    @TableField(value = "gmt_create",fill = FieldFill.INSERT)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss" , timezone = "GMT+8")
     private Date gmtCreate;
 
-    @TableField(value = "gmt_modified")
+    @TableField(value = "gmt_modified",fill = FieldFill.INSERT_UPDATE)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss" , timezone = "GMT+8")
     private Date gmtModified;
 
     private static final long serialVersionUID = 1L;

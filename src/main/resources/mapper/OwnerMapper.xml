@@ -3,7 +3,7 @@
 <mapper namespace="flybear.hziee.app.mapper.OwnerMapper">
   <resultMap id="BaseResultMap" type="flybear.hziee.app.entity.Owner">
     <!--@mbg.generated-->
-    <!--@Table vote_system_demo.`owner`-->
+    <!--@Table `owner`-->
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="oid" jdbcType="BIGINT" property="oid" />
     <result column="face_id" jdbcType="LONGVARCHAR" property="faceId" />

@@ -3,7 +3,7 @@
 <mapper namespace="flybear.hziee.app.mapper.ServicesMapper">
   <resultMap id="BaseResultMap" type="flybear.hziee.app.entity.Services">
     <!--@mbg.generated-->
-    <!--@Table vote_system_demo.services-->
+    <!--@Table services-->
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="service_name" jdbcType="VARCHAR" property="serviceName" />
     <result column="icon_url" jdbcType="VARCHAR" property="iconUrl" />

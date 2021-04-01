@@ -3,7 +3,7 @@
 <mapper namespace="flybear.hziee.app.mapper.CommunityServiceMapper">
   <resultMap id="BaseResultMap" type="flybear.hziee.app.entity.CommunityService">
     <!--@mbg.generated-->
-    <!--@Table vote_system_demo.community_service-->
+    <!--@Table community_service-->
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="community_id" jdbcType="BIGINT" property="communityId" />
     <result column="service_id" jdbcType="BIGINT" property="serviceId" />

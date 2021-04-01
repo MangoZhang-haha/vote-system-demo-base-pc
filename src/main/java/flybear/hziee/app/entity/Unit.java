@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "vote_system_demo.unit")
+@TableName(value = "unit")
 public class Unit implements Serializable {
     /**
      * 主键

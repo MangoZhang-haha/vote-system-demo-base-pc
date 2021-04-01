@@ -3,7 +3,7 @@
 <mapper namespace="flybear.hziee.app.mapper.BuildingMapper">
   <resultMap id="BaseResultMap" type="flybear.hziee.app.entity.Building">
     <!--@mbg.generated-->
-    <!--@Table vote_system_demo.building-->
+    <!--@Table building-->
     <id column="id" jdbcType="BIGINT" property="id" />
     <id column="bno" jdbcType="VARCHAR" property="bno" />
     <result column="building_name" jdbcType="VARCHAR" property="buildingName" />
