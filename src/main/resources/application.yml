@@ -6,6 +6,8 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
+  application:
+    name: vote-system-demo-base-pc
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
