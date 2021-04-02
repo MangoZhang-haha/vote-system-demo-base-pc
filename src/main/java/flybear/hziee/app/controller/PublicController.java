@@ -15,6 +15,9 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 公共控制器
  *
@@ -34,7 +37,7 @@ public class PublicController {
      * @return Token
      */
     @PostMapping("login")
-    public Result<String> login(String username, String password, @RequestParam(defaultValue = "0") byte type) {
+    public Result login(String username, String password, @RequestParam(defaultValue = "0") byte type) {
         Subject subject = SecurityUtils.getSubject();
         try {
             if (type == 0) {
@@ -56,7 +59,10 @@ public class PublicController {
                 LogModuleEnum.LOGIN,
                 "登录"
         );
-        return ResultUtil.success(JWTUtil.createToken(((User) subject.getPrincipal()).getUsername()));
+        Map<String, Object> resultMap = new HashMap<>(2);
+        resultMap.put("token", JWTUtil.createToken(((User) subject.getPrincipal()).getUsername()));
+        resultMap.put("user", SecurityUtils.getSubject().getPrincipal());
+        return ResultUtil.success(resultMap);
     }
 
     @Log(value = "登出", module = LogModuleEnum.LOGOUT)
